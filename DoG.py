@@ -38,6 +38,7 @@ class Difference_of_Gaussian(object):
         for i in range(self.num_DoG_images_per_octave+1, self.num_DoG_images_per_octave+5):
             dog_images.append(cv2.subtract(gaussian_images[i+1], gaussian_images[i]))         
 
+        # Normalize DoG images to [0,225] and save them.
         if self.printdog:
             for i in range(len(dog_images)):
                 img = np.zeros(shape = (dog_images[i].shape[0],dog_images[i].shape[1]))

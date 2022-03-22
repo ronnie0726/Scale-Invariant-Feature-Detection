@@ -21,7 +21,7 @@ def main():
     ### point keypoints on images ###
     DoG = Difference_of_Gaussian(args.threshold)
     
-    # print DoG images
+    # save DoG images
     DoG.printdog = True
     if args.image_path == './testdata/1.png':
         DoG.picture = '1'
